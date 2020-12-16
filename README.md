@@ -1,8 +1,8 @@
 # DxLibrary
 
 Following external libraries have been used here.
-1. Bootstrap
-2. Loadash
+1. Bootstrap - styling purpose.
+2. Loadash - data filtering and sorting.
 
 ## Development server
 
