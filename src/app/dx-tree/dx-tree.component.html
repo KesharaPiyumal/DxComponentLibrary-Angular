@@ -1,0 +1,39 @@
+<div class="d-flex flex-column h-100 p-2">
+  <div class="d-flex flex-row align-items-center">
+    <input type="checkbox"
+           class="mr-2"
+           [(ngModel)]="isSelectedAllChildrenInCustomTree"
+           (ngModelChange)="selectionAllCustomTree($event)"/>
+    <div class="d-flex align-items-center position-relative w-100">
+      <input type="text" [(ngModel)]="search" class="w-100"
+             (ngModelChange)="searchChild($event)"/>
+      <i class="fa fa-search input-icon"></i>
+    </div>
+  </div>
+  <div class="accordion-container border-top-gl">
+    <div id="vehicle-sensor-accordion">
+      <div *ngFor="let vGroup of customTree; let parent = index">
+        <div class="d-flex flex-row align-items-center">
+          <input type="checkbox" value="false"
+                 [(ngModel)]="vGroup['fullSelected']"
+                 (ngModelChange)="setGroupSelectionCustomTree($event, parent)"
+                 class="d-flex align-items-center"
+                 style="margin-left: 2px"
+          />
+          <span style="margin-left: 0.6875rem">{{ vGroup['label'] }}</span>
+        </div>
+        <div>
+          <div *ngFor="let ch of vGroup['children']; let child = index">
+            <div class="d-flex flex-column w-100 list-hover-gl" [ngClass]="ch.border ? 'border-bottom-gl' : ''">
+              <div class="d-flex flex-row align-items-center" (click)="selectChild(parent, child)">
+                <input type="checkbox" [(ngModel)]="ch['selected']" value="false"
+                       style="margin: 5px 0 0 12px;pointer-events: none"/>
+                <span style="margin-right: 10px;min-width: 60px" class="child-name">{{ ch['label'] }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+input[type=text] {
+  padding: 5px 32px 5px 5px !important;
+  outline: none !important;
+
+  &:hover {
+    padding: 6px 33px 6px 6px !important;
+    border: 1px solid orangered !important;
+    outline: none !important;
+  }
+
+  &:focus {
+    padding: 6px 33px 6px 6px !important;
+    border: 1px solid orangered !important;
+    outline: none !important;
+  }
+}
+
+.input-icon {
+  font-size: 14px;
+  color: black;
+  position: absolute;
+  right: 0;
+  margin: 6px 10px;
+}
+
