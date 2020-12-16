@@ -1,4 +1,4 @@
-# DxLibrary
+# DxLibrary - Reusable Component Library
 
 Following external libraries have been used here.
 1. Bootstrap - styling purpose.
