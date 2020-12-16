@@ -1,6 +1,8 @@
 # DxLibrary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+Following external libraries have been used here.
+1. Bootstrap
+2. Loadash
 
 ## Development server
 
